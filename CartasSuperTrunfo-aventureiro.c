@@ -35,8 +35,8 @@ void makeCarta(Carta *carta, int numero) {
 }
 
 void mostrarCarta(Carta *c, int numero) {
-    const float populationDensity = c->populacao / c->area;
-    const float pibPerCapital = c->pib * c->populacao;
+    const float populationDensity = (float) c->populacao / c->area;
+    const float pibPerCapital = c->pib / (float) c->populacao;
 
     printf("\n=== Carta %d ===\n", numero);
     printf("Estado: %c\n", c->estado);
